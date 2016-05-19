@@ -1,0 +1,22 @@
+{
+  "name": "early",
+  "version": "1.0.0",
+  "description": "nice module loading animation for modules that need a little starting time.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "(npmts)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushrocks/early.git"
+  },
+  "keywords": [
+    "preloader"
+  ],
+  "author": "Lossless GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pushrocks/early/issues"
+  },
+  "homepage": "https://github.com/pushrocks/early#readme"
+}
