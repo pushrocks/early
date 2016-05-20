@@ -1,17 +1,20 @@
 /// <reference path="./typings/index.d.ts" />
 let colors = require("colors");
-let ora = require("ora");
-let earlyOra;
+let readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 export let start = function(moduleStringArg:string){
-    earlyOra = ora({
-        text:"Loading " + moduleStringArg.green,
-        spinner:"bouncingBar"
-    });
-    earlyOra.start();
+    rl.write('Delete me!');
+    setTimeout(function(){
+        rl.write(null, {ctrl: true, name: 'u'});
+    },1000);
 };
 
 export let stop = function(){
-    earlyOra.stop();
+    
 };
 

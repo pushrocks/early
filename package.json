@@ -23,7 +23,6 @@
     "npmts": "^5.1.8"
   },
   "dependencies": {
-    "colors": "^1.1.2",
-    "ora": "^0.2.3"
+    "colors": "^1.1.2"
   }
 }
