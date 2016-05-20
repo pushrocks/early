@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/pushrocks/early/issues"
   },
-  "homepage": "https://github.com/pushrocks/early#readme"
+  "homepage": "https://github.com/pushrocks/early#readme",
+  "devDependencies": {
+    "npmts": "^5.1.8"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "ora": "^0.2.3"
+  }
 }

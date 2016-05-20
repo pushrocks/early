@@ -1,0 +1,16 @@
+"use strict";
+/// <reference path="./typings/index.d.ts" />
+var ora = require("ora");
+var earlyOra;
+exports.start = function (moduleStringArg) {
+    earlyOra = ora({
+        text: "Loading " + moduleStringArg.green,
+        spinner: "bouncingBar"
+    });
+    earlyOra.start();
+};
+exports.stop = function () {
+    earlyOra.stop();
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSw2Q0FBNkM7QUFDN0MsSUFBSSxHQUFHLEdBQUcsT0FBTyxDQUFDLEtBQUssQ0FBQyxDQUFDO0FBQ3pCLElBQUksUUFBUSxDQUFDO0FBRUYsYUFBSyxHQUFHLFVBQVMsZUFBc0I7SUFDOUMsUUFBUSxHQUFHLEdBQUcsQ0FBQztRQUNYLElBQUksRUFBQyxVQUFVLEdBQUcsZUFBZSxDQUFDLEtBQUs7UUFDdkMsT0FBTyxFQUFDLGFBQWE7S0FDeEIsQ0FBQyxDQUFDO0lBQ0gsUUFBUSxDQUFDLEtBQUssRUFBRSxDQUFDO0FBQ3JCLENBQUMsQ0FBQztBQUVTLFlBQUksR0FBRztJQUNkLFFBQVEsQ0FBQyxJQUFJLEVBQUUsQ0FBQztBQUNwQixDQUFDLENBQUMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLy8gPHJlZmVyZW5jZSBwYXRoPVwiLi90eXBpbmdzL2luZGV4LmQudHNcIiAvPlxyXG5sZXQgb3JhID0gcmVxdWlyZShcIm9yYVwiKTtcclxubGV0IGVhcmx5T3JhO1xyXG5cclxuZXhwb3J0IGxldCBzdGFydCA9IGZ1bmN0aW9uKG1vZHVsZVN0cmluZ0FyZzpzdHJpbmcpe1xyXG4gICAgZWFybHlPcmEgPSBvcmEoe1xyXG4gICAgICAgIHRleHQ6XCJMb2FkaW5nIFwiICsgbW9kdWxlU3RyaW5nQXJnLmdyZWVuLFxyXG4gICAgICAgIHNwaW5uZXI6XCJib3VuY2luZ0JhclwiXHJcbiAgICB9KTtcclxuICAgIGVhcmx5T3JhLnN0YXJ0KCk7XHJcbn07XHJcblxyXG5leHBvcnQgbGV0IHN0b3AgPSBmdW5jdGlvbigpe1xyXG4gICAgZWFybHlPcmEuc3RvcCgpO1xyXG59O1xyXG5cclxuIl19
