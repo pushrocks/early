@@ -51,7 +51,7 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:number = 1
         initReadline();
         logEarly();
     } else {
-        console.log("**** starting " + moduleName + " ****");
+        console.log("**** starting " + moduleName.cyan + " ****");
     };
 };
 
