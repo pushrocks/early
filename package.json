@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/pushrocks/early#readme",
   "devDependencies": {
-    "npmts": "^5.1.8"
+    "npmts": "^5.1.9"
   },
   "dependencies": {
     "colors": "^1.1.2"

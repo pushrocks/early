@@ -7,14 +7,49 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-export let start = function(moduleStringArg:string){
-    rl.write('Delete me!');
+let moduleName:string;
+let loaderLength:number;
+let frameCounter:number = 0;
+
+let makeFrame = ():string => {
+    let resultString:string = "["
+        + "/".green.repeat(frameCounter)
+        + " ".repeat(loaderLength - frameCounter)
+        + "]"
+        + " starting "
+        + moduleName.cyan;
+
+    if(frameCounter == loaderLength){
+        frameCounter = 0;
+    } else {
+        frameCounter++;
+    }
+    return resultString;
+};
+
+let abort:boolean = true;
+let logEarly = () => {
+    rl.write(null, {ctrl: true, name: 'u'});
+    rl.write(makeFrame());
     setTimeout(function(){
-        rl.write(null, {ctrl: true, name: 'u'});
-    },1000);
+        if(!abort){
+            logEarly();
+        }
+    },200);
+};
+
+
+// exports
+export let start = function(moduleNameArg:string,loaderLengthArg:number = 10){
+    abort = false;
+    moduleName = moduleNameArg;
+    loaderLength = loaderLengthArg;
+    logEarly();
 };
 
 export let stop = function(){
-    
+    abort = true;
+    rl.write(null, {ctrl: true, name: 'u'});
+    rl.close();
 };
 
