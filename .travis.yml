@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '4'
+- stable
+deploy:
+  provider: npm
+  email: npm@lossless.digital
+  api_key:
+    secure: WmJJw1aJ1kbTOtArdBvgtYEcEk2899hiPc/XnCoUrHz45DAgnAES4eVUbhI5AC78tjnKc+iqbB9e5+vziSW4G5P4KAuP0CYLd5v4G5ZC4IYigFPxroIib7wFtGoOlhe8AItLDMdYO2KcPYXVpZzaITj2FlfNjoqg5UiKnSVShKwUALQk6JdZ345d0iwyr2nmNA6m0FJhcO2weY3BEDRyPWuody/FEoVZ3I2Q1f3R50v3Kb7Nzfn0uob5ABjux4YZ4xJ6tNeJkU021tSgJhjqfwbVMoIVJohwa5jlaqXdMQvWWKvhOAFyDj6zOJ1BnIuVYltDoWczuPi3+YVtFoc2+rYdSXYUcK1aCfVQZ8DDYYzlZ9Sp1vxiy8D3RZuNkLzUImranCDl6r6EYTxEw2L2bAowo9wLZtnht/mlRvOOLM9ZYVi0yr7Cd9FhVfiLZO97OGybfTFvih+nbMZGk5/RVeQzYzsycgeNT96ii5+de0yerbD690Qf+Kap5IlS5Fyvo2Y/SVQ3nxgQt7Pa4bTLbMwzSmXoBgUO6j6d8Qv7fPGQvbOQJEGJaZDaqpgxxS7WIc2YtwLXXob757BxKNW6Y6xPCcTqX7lMqfyQa194EjPTNTK+O0YnGAFFnXps/uCc8ccH3z3x6IrAAQpPx68gPERiWMf2WiPsMoh+kH4UzLc=
+  on:
+    tags: true
+    repo: pushrocks/early
