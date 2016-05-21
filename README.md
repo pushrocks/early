@@ -1,12 +1,15 @@
 # early
-nice module loading animation for modules that need a little starting time.
+minimal and fast loading animation for modules that need a little starting time.
 
-> **note: this package is NOT READY YET**
+## Usage
 
-```typscript
+```typescript
+// Put the following at the start of your module
 import * as early from "early";
-early.start();
-// do your loading stuff
-early.stop();
+early.start("myModuleName");
+/*
+do your loading stuff
+*/
+early.stop(); // stop "early" when your module is ready
 ```
 

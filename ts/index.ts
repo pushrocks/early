@@ -2,10 +2,13 @@
 let colors = require("colors");
 let readline = require("readline");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+let rl; 
+let initReadline = () => {
+    rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+    });
+};
 
 let moduleName:string;
 let loaderLength:number;
@@ -40,16 +43,23 @@ let logEarly = () => {
 
 
 // exports
-export let start = function(moduleNameArg:string,loaderLengthArg:number = 10){
+export let start = function(moduleNameArg:string = "",loaderLengthArg:number = 10){
     abort = false;
     moduleName = moduleNameArg;
     loaderLength = loaderLengthArg;
-    logEarly();
+    if (!process.env.CI){
+        initReadline();
+        logEarly();
+    } else {
+        console.log("**** starting " + moduleName + " ****");
+    };
 };
 
 export let stop = function(){
     abort = true;
-    rl.write(null, {ctrl: true, name: 'u'});
-    rl.close();
+    if (!process.env.CI){
+        rl.write(null, {ctrl: true, name: 'u'});
+        rl.close();
+    }
 };
 
