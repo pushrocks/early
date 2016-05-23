@@ -1,12 +1,12 @@
 /// <reference path="./typings/index.d.ts" />
-let colors = require("colors");
-let readline = require("readline");
+import colors = require("colors");
+import path = require("path");
 
 import childProcess = require("child_process");
 let earlyChild;
 // exports
 export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "10"){
-    earlyChild = childProcess.fork("./dist/early.child.js",[],{
+    earlyChild = childProcess.fork(path.join(__dirname,"early.child.js"),[],{
         env: {
             moduleNameArg:moduleNameArg,
             loaderLengthArg:loaderLengthArg
