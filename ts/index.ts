@@ -9,7 +9,8 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "
     earlyChild = childProcess.fork(path.join(__dirname,"early.child.js"),[],{
         env: {
             moduleNameArg:moduleNameArg,
-            loaderLengthArg:loaderLengthArg
+            loaderLengthArg:loaderLengthArg,
+            CI: process.env.CI
         }
     });
 };
