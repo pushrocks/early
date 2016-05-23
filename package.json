@@ -1,6 +1,6 @@
 {
   "name": "early",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "nice module loading animation for modules that need a little starting time.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
