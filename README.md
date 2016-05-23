@@ -13,3 +13,4 @@ do your loading stuff
 early.stop(); // stop "early" when your module is ready
 ```
 
+early runs in its own process: The loader animation runs smoothly even when your event queue of your currently loading moudle is working heavily.

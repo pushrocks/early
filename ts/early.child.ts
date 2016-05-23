@@ -38,7 +38,6 @@ let logEarly = () => {
 };
 
 let start = function(moduleNameArg:string = "",loaderLengthArg:string = "10"){
-    console.log(process.env.CI)
     moduleName = moduleNameArg;
     loaderLength = parseInt(loaderLengthArg);
     if (process.env.CI == "undefined"){
