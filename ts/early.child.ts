@@ -34,13 +34,14 @@ let logEarly = () => {
     rl.write(makeFrame());
     setTimeout(function(){
         logEarly();
-    },200);
+    },80);
 };
 
 let start = function(moduleNameArg:string = "",loaderLengthArg:string = "10"){
+    console.log(process.env.CI)
     moduleName = moduleNameArg;
     loaderLength = parseInt(loaderLengthArg);
-    if (!process.env.CI){
+    if (process.env.CI == "undefined"){
         initReadline();
         logEarly();
     } else {
