@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pushrocks/early.git"
+    "url": "git+https://gitlab.com/pushrocks/early.git"
   },
   "keywords": [
     "preloader"
@@ -17,9 +17,9 @@
   "author": "Lossless GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pushrocks/early/issues"
+    "url": "https://gitlab.com/pushrocks/early/issues"
   },
-  "homepage": "https://github.com/pushrocks/early#readme",
+  "homepage": "https://gitlab.com/pushrocks/early#readme",
   "devDependencies": {
     "npmts": "^5.1.9"
   },
