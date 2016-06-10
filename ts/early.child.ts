@@ -40,12 +40,8 @@ let logEarly = () => {
 let start = function(moduleNameArg:string = "",loaderLengthArg:string = "10"){
     moduleName = moduleNameArg;
     loaderLength = parseInt(loaderLengthArg);
-    if (process.env.CI == "undefined"){
-        initReadline();
-        logEarly();
-    } else {
-        console.log("**** starting " + moduleName.cyan + " ****");
-    };
+    initReadline();
+    logEarly();
 };
 
 start(process.env.moduleNameArg,process.env.loaderLengthArg);

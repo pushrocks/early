@@ -6,8 +6,11 @@ import childProcess = require("child_process");
 let earlyChild;
 
 let doAnimation:boolean = true;
-if(process.argv.indexOf("-v") != -1){
+let doText:boolean = false;
+if(process.argv.indexOf("-v") != -1 || process.env.CI){
     doAnimation = false;
+} else if(process.argv.indexOf("-v") != -1){
+    doText = true;
 }
 
 // exports
@@ -20,6 +23,8 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "
                 CI: process.env.CI
             }
         });
+    } else if (doText) {
+        console.log("**** starting " + moduleNameArg.cyan + " ****");
     }
 };
 
