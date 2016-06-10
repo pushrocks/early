@@ -1,13 +1,10 @@
 import "typings-global";
 let colors = require("colors");
 import readline = require("readline");
-let rl; 
-let initReadline = () => {
-    rl = readline.createInterface({
+let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-    });
-};
+});
 
 let moduleName:string;
 let loaderLength:number;
@@ -29,19 +26,25 @@ let makeFrame = ():string => {
     return resultString;
 };
 
+let logEarlyAbort = false;
 let logEarly = () => {
     rl.write(null, {ctrl: true, name: 'u'});
     rl.write(makeFrame());
     setTimeout(function(){
-        logEarly();
+        if(!logEarlyAbort) logEarly();
     },80);
 };
 
 let start = function(moduleNameArg:string = "",loaderLengthArg:string = "10"){
     moduleName = moduleNameArg;
     loaderLength = parseInt(loaderLengthArg);
-    initReadline();
     logEarly();
 };
 
 start(process.env.moduleNameArg,process.env.loaderLengthArg);
+
+process.on('SIGINT', () => {
+    logEarlyAbort = true;
+    rl.write(null, {ctrl: true, name: 'u'});
+    rl.close();
+});

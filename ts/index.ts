@@ -31,11 +31,6 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "
 export let stop = function(){
     if(doAnimation){
         earlyChild.kill();
-        let rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        });
-        rl.close();
     }
 };
 
