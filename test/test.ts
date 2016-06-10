@@ -1,5 +1,5 @@
-/// <reference path="../ts/typings/index.d.ts" />
-import early = require("../dist/index.js");
+import "typings-test";
+import early = require("../dist/index");
 
 describe("early",function(){
     it(".start()",function(done){

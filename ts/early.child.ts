@@ -1,4 +1,4 @@
-/// <reference path="./typings/index.d.ts" />
+import "typings-global";
 let colors = require("colors");
 import readline = require("readline");
 let rl; 
