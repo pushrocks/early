@@ -9,7 +9,7 @@ let doAnimation:boolean = true;
 let doText:boolean = false;
 if(process.argv.indexOf("-v") != -1 || process.env.CI){
     doAnimation = false;
-} else if(process.argv.indexOf("-v") != -1){
+} else if(process.argv.indexOf("-v") == -1){
     doText = true;
 }
 
