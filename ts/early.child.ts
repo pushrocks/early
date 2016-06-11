@@ -48,6 +48,5 @@ process.on('SIGINT', () => {
     rl.write(null, {ctrl: true, name: 'u'});
     rl.close();
     rl.on("close",function(){
-        console.log("\n");
     })
 });

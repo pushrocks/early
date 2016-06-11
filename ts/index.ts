@@ -37,6 +37,7 @@ export let stop = function(){
             done.resolve();
         })
     } else {
+        console.log("\n");
         done.resolve();
     }
     return done.promise;
