@@ -7,7 +7,8 @@ describe("early",function(){
         early.start("early");
         setTimeout(done,5000);
     });
-    it(".stop()",function(){
-        early.stop();
+    it(".stop()",function(done){
+        early.stop()
+            .then(done);
     })
 })

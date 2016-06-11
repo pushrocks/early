@@ -1,6 +1,7 @@
 import "typings-global"
 import colors = require("colors");
 import path = require("path");
+let q = require("q");
 import readline = require("readline");
 import childProcess = require("child_process");
 let earlyChild;
@@ -30,6 +31,7 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "
 
 export let stop = function(){
     if(doAnimation){
+        let done = q.defer();
         earlyChild.kill();
         let rl = readline.createInterface({
             input: process.stdin,
@@ -37,6 +39,16 @@ export let stop = function(){
         });
         rl.write(null, {ctrl: true, name: 'u'});
         rl.close();
+        earlyChild.on("close",function(){
+            let rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+            rl.write(null, {ctrl: true, name: 'u'});
+            rl.close();
+            done.resolve();
+        })
+        return done.promise;
     }
 };
 
