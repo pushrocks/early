@@ -30,8 +30,8 @@ export let start = function(moduleNameArg:string = "",loaderLengthArg:string = "
 };
 
 export let stop = function(){
+    let done = q.defer();
     if(doAnimation){
-        let done = q.defer();
         earlyChild.kill();
         let rl = readline.createInterface({
             input: process.stdin,
@@ -48,7 +48,9 @@ export let stop = function(){
             rl.close();
             done.resolve();
         })
-        return done.promise;
+    } else {
+        done.resolve();
     }
+    return done.promise;
 };
 
