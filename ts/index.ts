@@ -33,19 +33,7 @@ export let stop = function(){
     let done = q.defer();
     if(doAnimation){
         earlyChild.kill();
-        let rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        });
-        rl.write(null, {ctrl: true, name: 'u'});
-        rl.close();
         earlyChild.on("close",function(){
-            let rl = readline.createInterface({
-                input: process.stdin,
-                output: process.stdout
-            });
-            rl.write(null, {ctrl: true, name: 'u'});
-            rl.close();
             done.resolve();
         })
     } else {

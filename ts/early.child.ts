@@ -47,5 +47,4 @@ process.on('SIGINT', () => {
     logEarlyAbort = true;
     rl.write(null, {ctrl: true, name: 'u'});
     rl.close();
-    process.exit(0);
 });
