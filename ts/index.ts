@@ -34,10 +34,10 @@ export let stop = function(){
     if(doAnimation){
         earlyChild.kill();
         earlyChild.on("close",function(){
+            console.log("\n");
             done.resolve();
         })
     } else {
-        console.log("\n");
         done.resolve();
     }
     return done.promise;
