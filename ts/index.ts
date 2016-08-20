@@ -13,7 +13,8 @@ let startTime;
 
 if (process.argv.indexOf("-v") != -1 || process.env.CI) {
     doAnimation = false;
-} else if (process.argv.indexOf("-v") == -1) {
+}
+if (process.argv.indexOf("-v") == -1 && process.env.CI) {
     doText = true;
 }
 
@@ -47,8 +48,7 @@ export let stop = function () {
             done.resolve();
         })
     } else {
-        console.log(` in ${executionTime} seconds!`);
-        console.log(`... finished loading moduleName in ${executionTime}`);
+        console.log(`... finished loading ${moduleName} in ${executionTime}`);
         done.resolve();
     }
     return done.promise;
