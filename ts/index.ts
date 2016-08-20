@@ -39,8 +39,10 @@ export let start = function (moduleNameArg: string = "", loaderLengthArg: string
 
 export let stop = function () {
     let done = q.defer();
-    let endTime = process.hrtime(startTime);
-    let executionTime:string = (endTime[0] + (endTime[1] / 1000000000)).toString();
+    let endTime = function(){try{return process.hrtime(startTime)}catch(err){return [0,0]}}();;
+    let exTimeSeconds = endTime[0];
+    let exTimeMilliseconds = endTime[1] / 1000000000;
+    let executionTime:string = (exTimeSeconds + exTimeMilliseconds).toString();
     if (doAnimation) {
         earlyChild.kill("SIGINT");
         earlyChild.on("close", function () {
