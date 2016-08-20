@@ -39,12 +39,12 @@ let start = function (moduleNameArg: string = "", loaderLengthArg: string = "10"
 
 start(process.env.moduleNameArg, process.env.loaderLengthArg);
 
-process.on('SIGHUP', () => {
+process.on('SIGINT', () => {
     logEarlyAbort = true;
     rl.write(null, { ctrl: true, name: 'u' });
     rl.write(`loaded ${chalk.green(moduleName)}`);
     rl.close();
     rl.on("close",() => {
-        process.exit(0);
+        
     })
 });
