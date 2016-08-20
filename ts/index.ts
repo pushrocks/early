@@ -40,7 +40,7 @@ export let start = function (moduleNameArg: string = "", loaderLengthArg: string
 export let stop = function () {
     let done = q.defer();
     let endTime = process.hrtime(startTime);
-    let executionTime = (endTime[0] * 1e9 + endTime[1]) / 1000000000;
+    let executionTime:string = (endTime[0] + (endTime[1] / 1000000000)).toString();
     if (doAnimation) {
         earlyChild.kill("SIGINT");
         earlyChild.on("close", function () {
