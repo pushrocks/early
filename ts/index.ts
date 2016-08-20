@@ -47,7 +47,7 @@ export let stop = function () {
             done.resolve();
         })
     } else {
-        console.log("... finished loading moduleName in {executionTime}");
+        console.log(`... finished loading moduleName in ${executionTime}`);
         done.resolve();
     }
     return done.promise;
