@@ -44,7 +44,7 @@ export let stop = function () {
     if (doAnimation) {
         earlyChild.kill("SIGINT");
         earlyChild.on("close", function () {
-            console.log(` in ${executionTime} seconds!`);
+            console.log(`loaded ${chalk.green(moduleName)} in ${executionTime} seconds!`);
             done.resolve();
         })
     } else {
