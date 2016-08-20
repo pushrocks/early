@@ -39,7 +39,14 @@ export let start = function (moduleNameArg: string = "", loaderLengthArg: string
 export let stop = function () {
     let done = q.defer();
     let endTime = process.hrtime(startTime);
-    let executionTime = (endTime[0] * 1e9 + endTime[1]) / 1000000000;
+    let executionTime = function(){
+        try {
+            return(endTime[0] * 1e9 + endTime[1]);
+        }
+        catch(err){
+            return undefined;
+        }
+    }() / 1000000000;
     if (doAnimation) {
         earlyChild.kill("SIGHUP");
         earlyChild.on("close", function () {
