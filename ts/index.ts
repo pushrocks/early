@@ -21,7 +21,7 @@ if (process.argv.indexOf("-v") == -1 && process.env.CI) {
 // exports
 export let start = function (moduleNameArg: string = "", loaderLengthArg: string = "10") {
 
-    startTime = process.hrtime();
+    startTime = Date.now();
 
     moduleName = moduleNameArg;
     if (doAnimation) {
@@ -39,10 +39,8 @@ export let start = function (moduleNameArg: string = "", loaderLengthArg: string
 
 export let stop = function () {
     let done = q.defer();
-    let endTime = function(){try{return process.hrtime(startTime)}catch(err){return [0,0]}}();;
-    let exTimeSeconds = endTime[0];
-    let exTimeMilliseconds = endTime[1] / 1000000000;
-    let executionTime:string = (exTimeSeconds + exTimeMilliseconds).toString();
+    let endTime = Date.now();
+    let executionTime:string = ((endTime - startTime) / 1000).toString();
     if (doAnimation) {
         earlyChild.kill("SIGINT");
         earlyChild.on("close", function () {
