@@ -1,7 +1,7 @@
 import "typings-global"
 import path = require("path");
 import chalk = require("chalk");
-let q = require("q");
+import q = require("q");
 import readline = require("readline");
 import childProcess = require("child_process");
 let earlyChild;
