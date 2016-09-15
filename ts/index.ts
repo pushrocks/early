@@ -36,19 +36,20 @@ export let start = function (moduleNameArg: string = '', loaderLengthArg: string
     }
 }
 
-export let stop = (): q.Promise<void> => {
-    let done = q.defer<void>()
+export let stop = (): q.Promise<number> => {
+    let done = q.defer<number>()
     let endTime = Date.now()
-    let executionTime: string = ((endTime - startTime) / 1000).toString()
+    let earlyExecutionTime: number = (endTime - startTime)
+    let earlyExecutionTimeString: string = (earlyExecutionTime / 1000).toString()
     if (doAnimation) {
         earlyChild.kill('SIGINT')
         earlyChild.on('close', function () {
-            console.log(`loaded ${chalk.green(moduleName)} in ${executionTime} seconds!`)
-            done.resolve()
+            console.log(`loaded ${chalk.green(moduleName)} in ${earlyExecutionTimeString} seconds!`)
+            done.resolve(earlyExecutionTime)
         })
     } else {
-        console.log(`... finished loading ${moduleName} in ${executionTime}`)
-        done.resolve()
+        console.log(`... finished loading ${moduleName} in ${earlyExecutionTimeString}`)
+        done.resolve(earlyExecutionTime)
     }
     return done.promise
 }

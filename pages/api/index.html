@@ -74,7 +74,9 @@ early.start(<span class="hljs-string">"myModuleName"</span>);
 <span class="hljs-comment">/*
 do your loading stuff
 */</span>
-early.stop(); <span class="hljs-comment">// stop "early" when your module is ready</span>
+early.stop().then((loadingTime:<span class="hljs-built_in">number</span>) =&gt; { <span class="hljs-comment">// loadingTime in milliseconds</span>
+
+}); <span class="hljs-comment">// stop "early" when your module is ready</span>
 </code></pre>
 				<p>early runs in its own process: The loader animation runs smoothly even when your event queue of your currently loading module is working heavily.</p>
 			</div>
