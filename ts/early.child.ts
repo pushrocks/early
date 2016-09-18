@@ -29,8 +29,11 @@ let logEarly = () => {
             logEarly()
         }, 80)
     } else {
-        readline.clearLine(process.stdout,0)
-        process.exit(0)
+        rl.write(null, { ctrl: true, name: 'u' })
+        rl.close()
+        setTimeout(function () {
+            process.exit(0)
+        }, 80)
     }
 }
 
