@@ -24,62 +24,25 @@
 		},
 		{
 			"id": 2,
-			"name": "\"ts/early.child\"",
+			"name": "\"ts/index\"",
 			"kind": 1,
 			"kindString": "External module",
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "/Users/philkunz/gitlab/pushrocks/early/ts/early.child.ts",
+			"originalName": "/Users/philkunz/gitlab/pushrocks/early/ts/index.ts",
 			"children": [
 				{
-					"id": 6,
-					"name": "frameCounter",
+					"id": 3,
+					"name": "doText",
 					"kind": 32,
 					"kindString": "Variable",
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "ts/early.child.ts",
-							"line": 11,
-							"character": 16
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "number"
-					},
-					"defaultValue": "0"
-				},
-				{
-					"id": 5,
-					"name": "loaderLength",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 10,
-							"character": 16
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "number"
-					}
-				},
-				{
-					"id": 9,
-					"name": "logEarlyAbort",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 23,
-							"character": 17
+							"fileName": "ts/index.ts",
+							"line": 7,
+							"character": 10
 						}
 					],
 					"type": {
@@ -96,249 +59,8 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "ts/early.child.ts",
-							"line": 9,
-							"character": 14
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "string"
-					}
-				},
-				{
-					"id": 3,
-					"name": "rl",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 4,
-							"character": 6
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "unknown"
-					},
-					"defaultValue": " readline.createInterface({\n    input: process.stdin,\n    output: process.stdout\n})"
-				},
-				{
-					"id": 10,
-					"name": "logEarly",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 11,
-							"name": "logEarly",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"type": {
-								"type": "instrinct",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 24,
-							"character": 12
-						}
-					]
-				},
-				{
-					"id": 7,
-					"name": "makeFrame",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 8,
-							"name": "makeFrame",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"type": {
-								"type": "instrinct",
-								"name": "string"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 13,
-							"character": 13
-						}
-					]
-				},
-				{
-					"id": 12,
-					"name": "start",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 13,
-							"name": "start",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 14,
-									"name": "moduleNameArg",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "instrinct",
-										"name": "string"
-									},
-									"defaultValue": "\"\""
-								},
-								{
-									"id": 15,
-									"name": "loaderLengthArg",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "instrinct",
-										"name": "string"
-									},
-									"defaultValue": "\"10\""
-								}
-							],
-							"type": {
-								"type": "instrinct",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "ts/early.child.ts",
-							"line": 40,
-							"character": 9
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						6,
-						5,
-						9,
-						4,
-						3
-					]
-				},
-				{
-					"title": "Functions",
-					"kind": 64,
-					"children": [
-						10,
-						7,
-						12
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "ts/early.child.ts",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 16,
-			"name": "\"ts/index\"",
-			"kind": 1,
-			"kindString": "External module",
-			"flags": {
-				"isExported": true
-			},
-			"originalName": "/Users/philkunz/gitlab/pushrocks/early/ts/index.ts",
-			"children": [
-				{
-					"id": 18,
-					"name": "doAnimation",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
 							"fileName": "ts/index.ts",
 							"line": 8,
-							"character": 15
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "boolean"
-					},
-					"defaultValue": "true"
-				},
-				{
-					"id": 19,
-					"name": "doText",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/index.ts",
-							"line": 9,
-							"character": 10
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "boolean"
-					},
-					"defaultValue": "false"
-				},
-				{
-					"id": 17,
-					"name": "earlyChild",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/index.ts",
-							"line": 6,
-							"character": 14
-						}
-					],
-					"type": {
-						"type": "instrinct",
-						"name": "any"
-					}
-				},
-				{
-					"id": 20,
-					"name": "moduleName",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "ts/index.ts",
-							"line": 10,
 							"character": 14
 						}
 					],
@@ -349,7 +71,7 @@
 					"defaultValue": "\"undefined module name\""
 				},
 				{
-					"id": 21,
+					"id": 5,
 					"name": "startTime",
 					"kind": 32,
 					"kindString": "Variable",
@@ -357,33 +79,40 @@
 					"sources": [
 						{
 							"fileName": "ts/index.ts",
-							"line": 11,
+							"line": 9,
 							"character": 13
 						}
 					],
 					"type": {
 						"type": "instrinct",
-						"name": "any"
-					}
+						"name": "number"
+					},
+					"defaultValue": " Date.now()"
 				},
 				{
-					"id": 22,
+					"id": 6,
 					"name": "start",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {
 						"isExported": true
 					},
+					"comment": {
+						"shortText": "start the loading"
+					},
 					"signatures": [
 						{
-							"id": 23,
+							"id": 7,
 							"name": "start",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"comment": {
+								"shortText": "start the loading"
+							},
 							"parameters": [
 								{
-									"id": 24,
+									"id": 8,
 									"name": "moduleNameArg",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -395,7 +124,7 @@
 									"defaultValue": "\"\""
 								},
 								{
-									"id": 25,
+									"id": 9,
 									"name": "loaderLengthArg",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -416,13 +145,13 @@
 					"sources": [
 						{
 							"fileName": "ts/index.ts",
-							"line": 21,
+							"line": 18,
 							"character": 16
 						}
 					]
 				},
 				{
-					"id": 26,
+					"id": 10,
 					"name": "stop",
 					"kind": 64,
 					"kindString": "Function",
@@ -431,7 +160,7 @@
 					},
 					"signatures": [
 						{
-							"id": 27,
+							"id": 11,
 							"name": "stop",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -445,7 +174,7 @@
 					"sources": [
 						{
 							"fileName": "ts/index.ts",
-							"line": 39,
+							"line": 25,
 							"character": 15
 						}
 					]
@@ -456,19 +185,17 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						18,
-						19,
-						17,
-						20,
-						21
+						3,
+						4,
+						5
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						22,
-						26
+						6,
+						10
 					]
 				}
 			],
@@ -487,8 +214,7 @@
 			"kind": 1,
 			"children": [
 				1,
-				2,
-				16
+				2
 			]
 		}
 	]
