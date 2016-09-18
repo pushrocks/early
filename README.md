@@ -1,5 +1,5 @@
 # early
-minimal and fast loading animation for modules that need a little starting time.
+minimal and fast loading plugins for startup time measuring
 
 ## Availabililty
 [![npm](https://push.rocks/assets/repo-button-npm.svg)](https://www.npmjs.com/package/early)
@@ -30,5 +30,3 @@ early.stop().then((loadingTime:number) => { // loadingTime in milliseconds
 
 }); // stop "early" when your module is ready
 ```
-
-early runs in its own process: The loader animation runs smoothly even when your event queue of your currently loading module is working heavily.
