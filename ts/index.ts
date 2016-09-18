@@ -1,8 +1,6 @@
 import 'typings-global'
-import path = require('path')
 import chalk = require('chalk')
 import q = require('q')
-
 
 let doText: boolean = false
 let moduleName: string = 'undefined module name'
