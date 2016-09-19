@@ -1,5 +1,5 @@
 # early
-minimal and fast loading plugins for startup time measuring
+minimal and fast loading plugin for startup time measuring
 
 ## Availabililty
 [![npm](https://push.rocks/assets/repo-button-npm.svg)](https://www.npmjs.com/package/early)

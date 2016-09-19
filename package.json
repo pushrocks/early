@@ -1,7 +1,7 @@
 {
   "name": "early",
   "version": "2.0.34",
-  "description": "nice module loading animation for modules that need a little starting time.",
+  "description": "minimal and fast loading plugin for startup time measuring",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
