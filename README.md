@@ -30,3 +30,5 @@ early.stop().then((loadingTime:number) => { // loadingTime in milliseconds
 
 }); // stop "early" when your module is ready
 ```
+
+[![npm](https://push.rocks/assets/repo-header.svg)](https://push.rocks)
