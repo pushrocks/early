@@ -1,16 +1,11 @@
-import 'typings-test'
+import { expect, tap } from 'tapbundle'
+import * as smartdelay from 'smartdelay'
 import early = require('../dist/index')
 
-describe('early', function () {
-  it('.start()', function (done) {
-    this.timeout(10000)
-    early.start('early')
-    setTimeout(done, 5000)
-  })
-  it('.stop()', function (done) {
-    early.stop()
-      .then(() => {
-        done()
-      })
-  })
+tap.test('.start()', async () => {
+  early.start('early')
+  await smartdelay.delayFor(2000)
+})
+tap.test('.stop()', async () => {
+  await early.stop()
 })

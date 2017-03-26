@@ -21,8 +21,8 @@
   },
   "homepage": "https://gitlab.com/pushrocks/early#readme",
   "devDependencies": {
-    "npmts-g": "^6.0.0",
-    "typings-test": "^1.0.3"
+    "smartdelay": "^1.0.1",
+    "tapbundle": "^1.0.5"
   },
   "dependencies": {
     "beautycolor": "^1.0.7",

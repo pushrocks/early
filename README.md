@@ -21,7 +21,7 @@ minimal and fast loading plugin for startup time measuring
 ## Usage
 Use TypeScript for best in class instellisense.
 
-```typescript
+```javascript
 // Put the following at the start of your module
 import * as early from "early";
 early.start("myModuleName");

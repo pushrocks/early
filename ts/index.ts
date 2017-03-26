@@ -25,7 +25,7 @@ export let stop = (): Promise<number> => {
   let endTime = Date.now()
   let earlyExecutionTime: number = (endTime - startTime)
   let earlyExecutionTimeString: string = (earlyExecutionTime / 1000).toString()
-  console.log(`... finished loading within ${beautycolor.coloredString(earlyExecutionTimeString, 'blue')}`)
+  console.log(`OK! -> finished loading within ${beautycolor.coloredString(earlyExecutionTimeString, 'blue')}`)
   done.resolve(earlyExecutionTime)
   return done.promise
 }
