@@ -22,11 +22,11 @@
   "homepage": "https://gitlab.com/pushrocks/early#readme",
   "devDependencies": {
     "smartdelay": "^1.0.1",
-    "tapbundle": "^1.0.5"
+    "tapbundle": "^1.0.8"
   },
   "dependencies": {
     "beautycolor": "^1.0.7",
     "smartq": "^1.1.1",
-    "typings-global": "^1.0.14"
+    "typings-global": "^1.0.16"
   }
 }
