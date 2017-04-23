@@ -18,6 +18,21 @@ minimal and fast loading plugin for startup time measuring
 [![node](https://img.shields.io/badge/node->=%206.x.x-blue.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+## Usage
+Use TypeScript for best in class instellisense.
+
+```javascript
+// Put the following at the start of your module
+import * as early from "early";
+early.start("myModuleName");
+/*
+do your loading stuff
+*/
+early.stop().then((loadingTime:number) => { // loadingTime in milliseconds
+
+}); // stop "early" when your module is ready
+```
+
 For further information read the linked docs at the top of this README.
 
 > MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
