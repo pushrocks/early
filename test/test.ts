@@ -12,7 +12,7 @@ tap.test('.stop()', async () => {
 })
 
 tap.test('hrTime Measurement', async () => {
-  let earlyHr = new early.hrtMeasurement()
+  let earlyHr = new early.HrtMeasurement()
   earlyHr.start()
   await smartdelay.delayFor(1000)
   let measuredTime = earlyHr.stop()
