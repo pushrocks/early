@@ -1,6 +1,6 @@
 {
   "name": "early",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "minimal and fast loading plugin for startup time measuring",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
