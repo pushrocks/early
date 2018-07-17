@@ -1,11 +1,13 @@
 {
-  "name": "early",
+  "name": "@pushrocks/early",
   "version": "2.1.1",
+  "private": false,
   "description": "minimal and fast loading plugin for startup time measuring",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "(npmts)"
+    "test": "(tsrun test/test.ts)",
+    "build": "(npmts)"
   },
   "repository": {
     "type": "git",
@@ -21,12 +23,12 @@
   },
   "homepage": "https://gitlab.com/pushrocks/early#readme",
   "devDependencies": {
-    "smartdelay": "^1.0.1",
-    "tapbundle": "^1.0.8"
+    "@gitzone/tsrun": "^1.1.9",
+    "@pushrocks/smartdelay": "^2.0.1",
+    "@pushrocks/tapbundle": "^3.0.1"
   },
   "dependencies": {
-    "beautycolor": "^1.0.7",
-    "smartq": "^1.1.1",
-    "typings-global": "^1.0.16"
+    "@pushrocks/smartpromise": "^2.0.5",
+    "beautycolor": "^1.0.11"
   }
 }

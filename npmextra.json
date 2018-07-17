@@ -5,6 +5,7 @@
     "npmci": {
         "globalNpmTools": [
             "npmts"
-        ]
+        ],
+        "npmAccessLevel": "public"
     }
 }
