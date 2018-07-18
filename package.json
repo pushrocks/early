@@ -28,7 +28,7 @@
     "@pushrocks/tapbundle": "^3.0.1"
   },
   "dependencies": {
-    "@pushrocks/smartpromise": "^2.0.5",
-    "beautycolor": "^1.0.11"
+    "@pushrocks/consolecolor": "^2.0.1",
+    "@pushrocks/smartpromise": "^2.0.5"
   }
 }
