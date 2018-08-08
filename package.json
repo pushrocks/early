@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/early",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "private": false,
   "description": "minimal and fast loading plugin for startup time measuring",
   "main": "dist/index.js",
