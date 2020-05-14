@@ -19,7 +19,7 @@ export let start = function(moduleNameArg: string = '', loaderLengthArg: string 
   moduleName = moduleNameArg;
   startHrt = new HrtMeasurement();
   startHrt.start();
-  if (doText) {
+  if (doText && process.env.CLI_CALL_MODULENAME === moduleName) {
     console.log(`**** starting ${consolecolor.coloredString(moduleNameArg, 'green')} ****`);
   }
 };
@@ -28,9 +28,15 @@ export let stop = (): Promise<number> => {
   let done = smartpromise.defer<number>();
   let earlyExecutionTime = startHrt.stop().milliSeconds;
   let earlyExecutionTimeString: string = (earlyExecutionTime / 1000).toString();
-  console.log(
-    `OK! -> finished loading within ${consolecolor.coloredString(earlyExecutionTimeString, 'blue')}`
-  );
+  if (doText && process.env.CLI_CALL_MODULENAME === moduleName) {
+    console.log(
+      `OK! -> finished loading within ${consolecolor.coloredString(
+        earlyExecutionTimeString,
+        'blue'
+      )}`
+    );
+  }
+
   done.resolve(earlyExecutionTime);
   return done.promise;
 };

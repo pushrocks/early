@@ -1,11 +1,19 @@
 {
-    "npmts":{
-        "coverageTreshold":50
-    },
-    "npmci": {
-        "npmGlobalTools": [
-            "@gitzone/npmts"
-        ],
-        "npmAccessLevel": "public"
+  "npmci": {
+    "npmGlobalTools": [
+      "@gitzone/npmts"
+    ],
+    "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "projectType": "npm",
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "early",
+      "shortDescription": "minimal and fast loading plugin for startup time measuring",
+      "npmPackagename": "@pushrocks/early",
+      "license": "MIT"
     }
+  }
 }
