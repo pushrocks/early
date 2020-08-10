@@ -15,7 +15,7 @@ if (process.argv.indexOf('-v') === -1) {
 /**
  * start the loading
  */
-export let start = function(moduleNameArg: string = '', loaderLengthArg: string = '10') {
+export let start = function (moduleNameArg: string = '', loaderLengthArg: string = '10') {
   moduleName = moduleNameArg;
   startHrt = new HrtMeasurement();
   startHrt.start();

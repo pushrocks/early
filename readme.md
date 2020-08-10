@@ -8,16 +8,36 @@ minimal and fast loading plugin for startup time measuring
 * [docs (typedoc)](https://pushrocks.gitlab.io/early/)
 
 ## Status for master
-[![pipeline status](https://gitlab.com/pushrocks/early/badges/master/pipeline.svg)](https://gitlab.com/pushrocks/early/commits/master)
-[![coverage report](https://gitlab.com/pushrocks/early/badges/master/coverage.svg)](https://gitlab.com/pushrocks/early/commits/master)
-[![npm downloads per month](https://img.shields.io/npm/dm/@pushrocks/early.svg)](https://www.npmjs.com/package/@pushrocks/early)
-[![Known Vulnerabilities](https://snyk.io/test/npm/@pushrocks/early/badge.svg)](https://snyk.io/test/npm/@pushrocks/early)
-[![TypeScript](https://img.shields.io/badge/TypeScript->=%203.x-blue.svg)](https://nodejs.org/dist/latest-v10.x/docs/api/)
-[![node](https://img.shields.io/badge/node->=%2010.x.x-blue.svg)](https://nodejs.org/dist/latest-v10.x/docs/api/)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://prettier.io/)
+
+Status Category | Status Badge
+-- | --
+GitLab Pipelines | [![pipeline status](https://gitlab.com/pushrocks/early/badges/master/pipeline.svg)](https://lossless.cloud)
+GitLab Pipline Test Coverage | [![coverage report](https://gitlab.com/pushrocks/early/badges/master/coverage.svg)](https://lossless.cloud)
+npm | [![npm downloads per month](https://badgen.net/npm/dy/@pushrocks/early)](https://lossless.cloud)
+Snyk | [![Known Vulnerabilities](https://badgen.net/snyk/pushrocks/early)](https://lossless.cloud)
+TypeScript Support | [![TypeScript](https://badgen.net/badge/TypeScript/>=%203.x/blue?icon=typescript)](https://lossless.cloud)
+node Support | [![node](https://img.shields.io/badge/node->=%2010.x.x-blue.svg)](https://nodejs.org/dist/latest-v10.x/docs/api/)
+Code Style | [![Code Style](https://badgen.net/badge/style/prettier/purple)](https://lossless.cloud)
+PackagePhobia (total standalone install weight) | [![PackagePhobia](https://badgen.net/packagephobia/install/@pushrocks/early)](https://lossless.cloud)
+PackagePhobia (package size on registry) | [![PackagePhobia](https://badgen.net/packagephobia/publish/@pushrocks/early)](https://lossless.cloud)
+BundlePhobia (total size when bundled) | [![BundlePhobia](https://badgen.net/bundlephobia/minzip/@pushrocks/early)](https://lossless.cloud)
+Platform support | [![Supports Windows 10](https://badgen.net/badge/supports%20Windows%2010/yes/green?icon=windows)](https://lossless.cloud) [![Supports Mac OS X](https://badgen.net/badge/supports%20Mac%20OS%20X/yes/green?icon=apple)](https://lossless.cloud)
 
 ## Usage
 
+Use TypeScript for best in class instellisense.
+
+```javascript
+// Put the following at the start of your module
+import * as early from 'early';
+early.start('myModuleName');
+/*
+do your loading stuff
+*/
+early.stop().then((loadingTime: number) => {
+  // loadingTime in milliseconds
+}); // stop "early" when your module is ready
+```
 
 ## Contribution
 
